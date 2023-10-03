@@ -62,3 +62,29 @@ main{
     width: 20px;
     height: 20px;
 }
+
+/* Media Query */
+
+@media screen and (max-width:576px){
+
+    .main-content{
+        width: calc(100% - 70px)
+    }
+
+    .side-bar{
+        width: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 20px;
+    }
+ 
+    .menu span{
+        display: none;
+    }
+
+    .settings span{
+        display: none;
+    }
+}
