@@ -1,3 +1,5 @@
+/* Generali */
+
 :root {
     --color-bg-search-bar: #e5e5e5;
     --color-bg-body: #f8f9fa;
@@ -25,13 +27,30 @@ main{
     display: flex;
 }
 
+.main-content{
+    width: calc(100% - 150px);
+}
+
+/* Side-bar */
+
 .side-bar{
     width: 150px;
     height: 100%;
     background-image: url("../img/sidebar-bg.png");
     background-color:  #0f263d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.main-content{
-    width: calc(100% - 150px);
+.menu{
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.settings{
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
