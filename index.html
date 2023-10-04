@@ -46,7 +46,15 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </li>
               <li class="list-group-item border-0 d-lg-block">
-                <i class="fa-solid fa-bell" style="color: #ed9702;"></i>
+                <div class="dropdown">
+                  <i class="fa-solid fa-bell dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="color: #ed9702;"></i>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profilo</a></li>
+                    <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
@@ -84,7 +92,7 @@
       <div class="main-content">
         <div class="container-fluid bg-primary text-white">
           <div class="row flex-lg-row-reverse">
-            <div class="col-12 col-lg-4 pt-2">
+            <div class="col-12 col-lg-4 pt-2 ps-5">
               <p>Nuovo Studente</p>
               <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
                 aria-controls="staticBackdrop">
@@ -142,7 +150,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-4 pt-2">
+            <div class="col-12 col-lg-4 pt-2 ps-5 ">
               <p>Studenti online negli ultimi 30 minuti</p>
               <span class="fs-2">125</span>
             </div>
