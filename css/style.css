@@ -11,6 +11,10 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.my-bg{
+    background-color: rgb(22, 81, 191);
+}
+
 .wrapper{
     width: 100%;
     height: 100vh;
@@ -61,6 +65,18 @@ main{
 .image{
     width: 20px;
     height: 20px;
+}
+
+.icon{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 /* Media Query */

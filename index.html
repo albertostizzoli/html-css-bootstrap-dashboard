@@ -17,41 +17,31 @@
 <body>
   <div class="wrapper">
     <!-- intestazione -->
-    <header class="border pt-2">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <img src="img/logo.svg" alt="Logo">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-4">
-              <li class="nav-item">
+    <header class="d-flex align-items-center">
+      <nav class="container-fluid">
+        <div class="row bg-white align-items-center">
+          <div class="col-auto">
+              <img src="img/logo.svg" alt="Logo" class="d-none d-lg-block">
+              <img src="img/mobile-logo.png" alt="Logo-Mobile" class=" d-none">
+          </div>
+          <div class="col">
+            <input type="search" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel">
+          </div>
+          <div class="col-auto">
+            <ul class="list-group list-group-horizontal border-0">
+              <li class="list-group-item border-0 d-none d-lg-block">
                 <i class="fa-solid fa-bars"></i>
               </li>
-              <li class="nav-item ps-4">
+              <li class="list-group-item border-0 d-none d-lg-block">
                 <i class="fa-solid fa-question"></i>
               </li>
-              <li class="nav-item ps-4">
+              <li class="list-group-item border-0 d-none d-lg-block">
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </li>
-              <li class="nav-item dropdown ps-4">
-                <i class="fa-solid fa-bell"></i>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+              <li class="list-group-item border-0 d-lg-block">
+                <i class="fa-solid fa-bell" style="color: #ed9702;"></i>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
           </div>
         </div>
       </nav>
@@ -85,11 +75,26 @@
 
       <!-- barra superiore-->
       <div class="main-content">
-        <div class="container-fluid bg-primary">
-          <div class="row">
-            <div class="col">1</div>
-            <div class="col">2</div>
-            <div class="col">3</div>
+        <div class="container-fluid bg-primary text-white">
+          <div class="row flex-lg-row-reverse">
+            <div class="col-12 col-lg-4 pt-2">
+              <p>Nuovo Studente<i class="fa-solid fa-plus icon bg-primary border"></i></p>
+            </div>
+            <div class="col-12 col-lg-4 pt-2">
+              <p>Studenti online negli ultimi 30 minuti</p>
+              <span class="fs-2">125</span>
+            </div>
+            <div class="col-12 col-lg-4 pt-2">
+              <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <h3>Boolean <span class="badge text my-bg fs-6">Piano blaze</span></h3>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item text-white fs-6"><span class="badge text my-bg">3 app</span></li>
+                  <li class="breadcrumb-item text-white fs-6" aria-current="page"><span class="badge text my-bg">Boolean mobile app</span></li>
+                  <li class="breadcrumb-item text-white fs-6" aria-current="page"><span class="badge text my-bg">Boolean web app</span></li>
+                  <li class="breadcrumb-item text-white fs-6" aria-current="page"><span class="badge text my-bg">Boolean blog app</span></li>
+                </ol>
+              </nav>
+            </div>
           </div>
           <!-- fine barra superiore -->
 
