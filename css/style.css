@@ -62,6 +62,10 @@ main{
 
 /* Contenuto Principale */
 
+.logo-small{
+    display: none;
+}
+
 .image{
     width: 20px;
     height: 20px;
@@ -101,6 +105,20 @@ main{
     }
 
     .settings span{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .logo-small{
+        display: block;
+        height: 50px;
+        width: 50px;
+    }
+
+    .table-2{
         display: none;
     }
 }

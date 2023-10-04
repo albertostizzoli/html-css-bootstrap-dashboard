@@ -21,11 +21,18 @@
       <nav class="container-fluid">
         <div class="row bg-white align-items-center">
           <div class="col-auto">
-              <img src="img/logo.svg" alt="Logo" class="d-none d-lg-block">
-              <img src="img/mobile-logo.png" alt="Logo-Mobile" class=" d-none">
+            <img src="img/logo.svg" alt="Logo" class="d-none d-lg-block logo">
+            <img src="img/mobile-logo.png" alt="Logo-Mobile" class="logo-small">
           </div>
           <div class="col">
-            <input type="search" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel">
+            <div class="debug input-group px-1">
+              <span class="input-group-text border-0">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              <input type="text" class="form-control input-group-text border-0 text-start"
+                aria-label="Dollar amount (with dot and two decimal places)"
+                placeholder="Prova a cercare: Lezioni di Lavarel">
+            </div>
           </div>
           <div class="col-auto">
             <ul class="list-group list-group-horizontal border-0">
@@ -78,7 +85,62 @@
         <div class="container-fluid bg-primary text-white">
           <div class="row flex-lg-row-reverse">
             <div class="col-12 col-lg-4 pt-2">
-              <p>Nuovo Studente<i class="fa-solid fa-plus icon bg-primary border"></i></p>
+              <p>Nuovo Studente</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                aria-controls="staticBackdrop">
+                <span><i class="fa-solid fa-plus icon border"></i></span>
+              </button>
+              <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header">
+                  <h5>Inserisci un nuovo studente</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form class="row g-3">
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" name="Nome" value="Nome" required>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" name="Cognome" value="Cognome" required>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="email" class="form-control" name="E-mail" value="E-mail" required>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="password" class="form-control" name="Password" value="Password" required>
+                    </div>
+                    <div class="col-12">
+                      <input type="text" class="form-control" name="Indirizzo" value="Indirizzo" required>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" name="Città" value="Città" required>
+                    </div>
+                    <div class="col-md-4">
+                      <select name="Stato" required>
+                        <option value="Stato">Italia</option>
+                        <option value="Stato">Francia</option>
+                        <option value="Stato">Germania</option>
+                        <option value="Stato">Spagna</option>
+                        <option value="Stato">Regno Unito</option>
+                        <option value="Stato">Stati Uniti</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                        <label class="form-check-label" for="gridCheck">
+                          Seleziona per proseguire
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Salva</button>
+                      <button type="submit" class="btn btn-warning">Annulla</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
             <div class="col-12 col-lg-4 pt-2">
               <p>Studenti online negli ultimi 30 minuti</p>
@@ -89,9 +151,12 @@
                 <h3>Boolean <span class="badge text my-bg fs-6">Piano blaze</span></h3>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item text-white fs-6"><span class="badge text my-bg">3 app</span></li>
-                  <li class="breadcrumb-item text-white fs-6" aria-current="page"><span class="badge text my-bg">Boolean mobile app</span></li>
-                  <li class="breadcrumb-item text-white fs-6" aria-current="page"><span class="badge text my-bg">Boolean web app</span></li>
-                  <li class="breadcrumb-item text-white fs-6" aria-current="page"><span class="badge text my-bg">Boolean blog app</span></li>
+                  <li class="breadcrumb-item text-white fs-6" aria-current="page"><span class="badge text my-bg">Boolean
+                      mobile app</span></li>
+                  <li class="breadcrumb-item text-white fs-6" aria-current="page"><span class="badge text my-bg">Boolean
+                      web app</span></li>
+                  <li class="breadcrumb-item text-white fs-6" aria-current="page"><span class="badge text my-bg">Boolean
+                      blog app</span></li>
                 </ol>
               </nav>
             </div>
@@ -108,8 +173,8 @@
                     <thead>
                       <tr>
                         <th scope="col">Nome</th>
-                        <th scope="col">Data Inizio</th>
-                        <th scope="col">ROI</th>
+                        <th scope="col" class="table-2">Data Inizio</th>
+                        <th scope="col" class="table-2">ROI</th>
                         <th scope="col">Stato</th>
                         <th scope="col">Azioni</th>
                       </tr>
@@ -117,8 +182,8 @@
                     <tbody>
                       <tr>
                         <th scope="row"><img class="image" src="img/class-avatar.jpg" alt="Avatar"> Classe 75</th>
-                        <td>15 Febbraio 2021</td>
-                        <td>20%</td>
+                        <td class="table-2">15 Febbraio 2021</td>
+                        <td class="table-2">20%</td>
                         <td><span class="badge text-bg-success">Done</span></td>
                         <td><button type="button" class="btn btn-light me-0"><i
                               class="fa-solid fa-pen"></i></button><button type="button" class="btn btn-light"><i
@@ -126,8 +191,8 @@
                       </tr>
                       <tr>
                         <th scope="row"><img class="image" src="img/class-avatar.jpg" alt="Avatar"> Classe 76</th>
-                        <td>16 Febbraio 2021</td>
-                        <td>20%</td>
+                        <td class="table-2">16 Febbraio 2021</td>
+                        <td class="table-2">20%</td>
                         <td><span class="badge text-bg-success">Done</span></td>
                         <td><button type="button" class="btn btn-light me-0"><i
                               class="fa-solid fa-pen"></i></button><button type="button" class="btn btn-light"><i
@@ -135,8 +200,8 @@
                       </tr>
                       <tr>
                         <th scope="row"><img class="image" src="img/class-avatar.jpg" alt="Avatar"> Classe 77</th>
-                        <td>17 Febbraio 2021</td>
-                        <td>20%</td>
+                        <td class="table-2">17 Febbraio 2021</td>
+                        <td class="table-2">20%</td>
                         <td><span class="badge text-bg-warning text-light">process</span></td>
                         <td><button type="button" class="btn btn-light me-0"><i
                               class="fa-solid fa-pen"></i></button><button type="button" class="btn btn-light"><i
@@ -144,8 +209,8 @@
                       </tr>
                       <tr>
                         <th scope="row"><img class="image" src="img/class-avatar.jpg" alt="Avatar"> Classe 78</th>
-                        <td>18 Febbraio 2021</td>
-                        <td>20%</td>
+                        <td class="table-2">18 Febbraio 2021</td>
+                        <td class="table-2">20%</td>
                         <td><span class="badge text-bg-success">Done</span></td>
                         <td><button type="button" class="btn btn-light me-0"><i
                               class="fa-solid fa-pen"></i></button><button type="button" class="btn btn-light"><i
@@ -153,8 +218,8 @@
                       </tr>
                       <tr>
                         <th scope="row"><img class="image" src="img/class-avatar.jpg" alt="Avatar"> Classe 79</th>
-                        <td>19 Febbraio 2021</td>
-                        <td>20%</td>
+                        <td class="table-2">19 Febbraio 2021</td>
+                        <td class="table-2">20%</td>
                         <td><span class="badge text-bg-danger">failed</span></td>
                         <td><button type="button" class="btn btn-light me-0"><i
                               class="fa-solid fa-pen"></i></button><button type="button" class="btn btn-light"><i
@@ -162,8 +227,8 @@
                       </tr>
                       <tr>
                         <th scope="row"><img class="image" src="img/class-avatar.jpg" alt="Avatar"> Classe 80</th>
-                        <td>20 Febbraio 2021</td>
-                        <td>20%</td>
+                        <td class="table-2">20 Febbraio 2021</td>
+                        <td class="table-2">20%</td>
                         <td><span class="badge text-bg-success">Done</span></td>
                         <td><button type="button" class="btn btn-light me-1"><i
                               class="fa-solid fa-pen"></i></button><button type="button" class="btn btn-light"><i
@@ -171,8 +236,8 @@
                       </tr>
                       <tr>
                         <th scope="row"><img class="image" src="img/class-avatar.jpg" alt="Avatar"> Classe 81</th>
-                        <td>21 Febbraio 2021</td>
-                        <td>20%</td>
+                        <td class="table-2">21 Febbraio 2021</td>
+                        <td class="table-2">20%</td>
                         <td><span class="badge text-bg-danger">failed</span></td>
                         <td><button type="button" class="btn btn-light me-1"><i
                               class="fa-solid fa-pen"></i></button><button type="button" class="btn btn-light"><i
@@ -180,8 +245,8 @@
                       </tr>
                       <tr>
                         <th scope="row"><img class="image" src="img/class-avatar.jpg" alt="Avatar"> Classe 82</th>
-                        <td>22 Febbraio 2021</td>
-                        <td>20%</td>
+                        <td class="table-2">22 Febbraio 2021</td>
+                        <td class="table-2">20%</td>
                         <td><span class="badge text-bg-success">Done</span></td>
                         <td><button type="button" class="btn btn-light me-1"><i
                               class="fa-solid fa-pen"></i></button><button type="button" class="btn btn-light"><i
@@ -249,19 +314,19 @@
                 <div class="card-header">
                   <h2>Todo</h2>
                   <div class="form-check border bg-body pt-1 pb-1 ps-4">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <input class="form-check-input" type="checkbox" value="check">
                     <label class="form-check-label" for="flexCheckDefault">
                       Kickoff nuove classi
                     </label>
                   </div>
                   <div class="form-check border bg-body pt-1 pb-1">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <input class="form-check-input" type="checkbox" value="check">
                     <label class="form-check-label" for="flexCheckChecked">
                       Lezione su Bootstrap 5 in classe #75
                     </label>
                   </div>
                   <div class="form-check border bg-body pt-1 pb-1 ">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <input class="form-check-input" type="checkbox" value="check">
                     <label class="form-check-label" for="flexCheckDefault">
                       Controllare username github nuovi studenti
                     </label>
