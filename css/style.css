@@ -83,8 +83,8 @@ ul, li{
     line-height: 40px;
     font-size: 20px;
     color: white;
-    margin-right: 5px;
-    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Media Query */
